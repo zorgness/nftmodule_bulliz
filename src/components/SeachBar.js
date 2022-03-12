@@ -5,10 +5,10 @@ import '../styles/SearchBar.css'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 
+
 class SeachBar extends Component {
     constructor(props) {
         super(props)
-        
         this.state = {
             nft : [],
             searchToken : '',
@@ -21,6 +21,7 @@ class SeachBar extends Component {
     
     _loadNftInfo(event) {
         event.preventDefault();
+        
         if(this.state.searchToken.length === 44 ) {
             
             NftInfoJson(this.state.searchToken)
@@ -35,6 +36,7 @@ class SeachBar extends Component {
             
             this.setState({searchToken:''})
         } 
+        
     }
 
 

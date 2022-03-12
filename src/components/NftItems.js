@@ -70,7 +70,7 @@ class NftItems extends Component {
 
                     <div className='attributes-container'>
                         
-                            <Attributes elements={nft.attributes} />
+                        <Attributes elements={nft.attributes} />
 
                     </div>
 

@@ -1,8 +1,10 @@
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import VisibilitySensor from "react-visibility-sensor";
+import React from 'react';
 
 const rarityChart = require('../Data/raritychart.json')
+
 
 
 
@@ -48,14 +50,15 @@ const RarityItems = ({metadata}) =>
             {({ isVisible }) => {
               const percentage = isVisible ? 100 - rarityTotal(metadata) : 0;
               return (
-                <CircularProgressbar
+                <CircularProgressbarWithChildren
+                
                 value={percentage} 
                 minValue={0} 
                 maxValue={100} 
-                text={rarityTotal(metadata) == 100.00 ? '0 %' : `${rarityTotal(metadata)}%`}
+                // text={rarityTotal(metadata) == 100.00 ? '0 %' : `${rarityTotal(metadata)}%`}
                 styles={buildStyles({
                  pathColor: `rgba(194, 158, 120, ${100 - rarityTotal(metadata)})`,
-                 textSize: '18px',
+                 textSize: '25px',
                  textColor: 'white',
                  trailColor: 'white',
                  backgroundColor: 'grey"',
@@ -63,7 +66,9 @@ const RarityItems = ({metadata}) =>
              
                 
                })}
-              />
+              >
+                <h3 style={styles.text}>{rarityTotal(metadata) === '100.00' ? '0 %' : `${rarityTotal(metadata)}%`}</h3>
+                 </ CircularProgressbarWithChildren>
                 
               );
             }}
@@ -75,6 +80,14 @@ const RarityItems = ({metadata}) =>
 
      
     </div>
+
+
+            
+
+    
+
+
+
 
     
 )

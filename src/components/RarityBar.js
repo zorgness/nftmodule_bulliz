@@ -1,6 +1,54 @@
 import ProgressBar from "@ramonak/react-progress-bar";
 import '../styles/RarityBar.css'
+import styled, { keyframes } from 'styled-components';
+import { slideInUp, tada, zoomIn } from 'react-animations';
+
 const rarityChart = require('../Data/raritychart.json')
+
+const slideAnimation = keyframes`${slideInUp}`;
+const tadaAnimation = keyframes`${tada}`
+const zoomInAnimation = keyframes`${zoomIn}`
+
+const SlideDiv = styled.div`
+  animation: 2s ${slideAnimation};
+`;
+
+const TadaDiv = styled.div`
+  animation: 2s ${tadaAnimation};
+`;
+
+const ZoomInDiv = styled.div`
+    animation: 5s ${zoomInAnimation};
+`;
+
+
+function selectValue(value) {
+    
+    let res = "";
+    
+        if(value >= 1 && value <= 19) {
+            res = "COMMON"
+        }
+        if(value >= 20 && value <= 39) {
+            res = "UNCOMMON"
+        }
+        if(value >= 40 && value <= 59) {
+            res = "RARE"
+        }
+        if(value >= 60 && value <= 79) {
+            res = "EPIC"
+        } 
+        if(value >= 61 && value <= 99) {
+            res = "LEGENDARY"
+        } 
+  
+        return res
+      
+  }
+  
+
+
+
 
 
 function rarityTotal(data) {
@@ -28,26 +76,28 @@ function rarityTotal(data) {
       return (sumTotal / type.length).toFixed(2);
     }
 
-    
-
 }
 
 
-
-
 const RarityBar = ({metadata}) => (
+
+
+        
     
-       
+    
 
-        <div style={styles.rarity_}>
+        <div style={styles.rarity_} className="progressBar">
 
-        <div style={styles.progressStep}>
+           <ZoomInDiv><div style={styles.text}>{selectValue(100 - parseInt((rarityTotal(metadata))))}</div></ZoomInDiv> 
+            
+
+        {/* <div style={styles.progressStep}>
             <div style={styles.text}>COMMON</div>
             <div style={styles.text}>UNCOMMON</div>
             <div style={styles.text}>RARE</div>
             <div style={styles.text}>EPIC</div>
             <div style={styles.text}>LEGENDARY</div>
-        </div>
+        </div> */}
 
         <div style={styles.progressBar}>
 
@@ -66,19 +116,20 @@ const RarityBar = ({metadata}) => (
              transitionTimingFunction= 'linear'
              animateOnRender={true} 
              
+             
               />
 
 
         </div>
 
-        <div style={styles.step}>
+        {/* <div style={styles.step}>
             <div style={styles.text}>|</div>
             <div style={styles.text}>|</div>
             <div style={styles.text}>|</div>
             <div style={styles.text}>|</div>
             
             
-        </div>
+        </div> */}
         
         </div>
 
@@ -86,6 +137,7 @@ const RarityBar = ({metadata}) => (
 
     
 )
+
 
 
 
@@ -107,7 +159,9 @@ const styles = {
     },
     text: {
         fontFamily:'Times New Roman, Times, serif',
-        color: 'white'
+        color: 'white',
+        fontSize: 25,
+        padding: 10
     },
 
     rarity_: {
