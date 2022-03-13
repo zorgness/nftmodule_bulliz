@@ -31,7 +31,7 @@ const Attributes = ({elements}) => (
       width: 200,
       margin: 10,
       padding: 10,
-      backgroundColor: "#c29e78",
+      backgroundColor: "#a37621",
       textTransform: "capitalize",
       borderRadius: 20,
       border: 'solid white 1px'

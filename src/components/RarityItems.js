@@ -57,7 +57,7 @@ const RarityItems = ({metadata}) =>
                 maxValue={100} 
                 // text={rarityTotal(metadata) == 100.00 ? '0 %' : `${rarityTotal(metadata)}%`}
                 styles={buildStyles({
-                 pathColor: `rgba(194, 158, 120, ${100 - rarityTotal(metadata)})`,
+                 pathColor: `rgba(163, 118, 33, ${100 - rarityTotal(metadata)})`,
                  textSize: '25px',
                  textColor: 'white',
                  trailColor: 'white',
