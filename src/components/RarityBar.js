@@ -1,13 +1,15 @@
 import ProgressBar from "@ramonak/react-progress-bar";
 import '../styles/RarityBar.css'
 import styled, { keyframes } from 'styled-components';
-import { slideInUp, tada, zoomIn } from 'react-animations';
+import { slideInUp, tada, zoomIn, fadeIn } from 'react-animations';
 
 const rarityChart = require('../Data/raritychart.json')
 
 const slideAnimation = keyframes`${slideInUp}`;
-const tadaAnimation = keyframes`${tada}`
-const zoomInAnimation = keyframes`${zoomIn}`
+const tadaAnimation = keyframes`${tada}`;
+const zoomInAnimation = keyframes`${zoomIn}`;
+const fadeInAnimation = keyframes`${fadeIn}`;
+
 
 const SlideDiv = styled.div`
   animation: 2s ${slideAnimation};
@@ -18,13 +20,18 @@ const TadaDiv = styled.div`
 `;
 
 const ZoomInDiv = styled.div`
-    animation: 5s ${zoomInAnimation};
+    animation: 10s ${zoomInAnimation};
+`;
+
+const FadeInDiv = styled.div`
+    animation: 13s ${fadeInAnimation}
 `;
 
 
+
 function selectValue(value) {
-    
-    let res = "";
+
+        let res = "";
     
         if(value >= 1 && value <= 19) {
             res = "COMMON"
@@ -39,15 +46,13 @@ function selectValue(value) {
             res = "EPIC"
         } 
         if(value >= 61 && value <= 99) {
+            
             res = "LEGENDARY"
         } 
-  
+         
         return res
-      
-  }
   
-
-
+  }
 
 
 
@@ -82,13 +87,11 @@ function rarityTotal(data) {
 const RarityBar = ({metadata}) => (
 
 
-        
-    
     
 
         <div style={styles.rarity_} className="progressBar">
 
-           <ZoomInDiv><div style={styles.text}>{selectValue(100 - parseInt((rarityTotal(metadata))))}</div></ZoomInDiv> 
+            <FadeInDiv><ZoomInDiv><div style={styles.text}>{selectValue(100 - parseInt((rarityTotal(metadata))))}</div></ZoomInDiv></FadeInDiv>
             
 
         {/* <div style={styles.progressStep}>
