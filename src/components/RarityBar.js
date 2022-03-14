@@ -83,6 +83,21 @@ function rarityTotal(data) {
 
 }
 
+const RarityLevel = styled.div`    
+        color: grey;
+        font-family:'Times New Roman, Times, serif';
+        font-size: 14px;
+        @media (max-width: 450px) {
+            color: white;
+            font-size: 8px;
+        }
+       
+
+    
+        
+    
+`
+
 
 const RarityBar = ({metadata}) => (
 
@@ -130,12 +145,12 @@ const RarityBar = ({metadata}) => (
             
         </div>
 
-        <div style={styles.progressStep}>
-            <div style={styles.text3}>COMMON</div>
-            <div style={styles.text3}>UNCOMMON</div>
-            <div style={styles.text3}>RARE</div>
-            <div style={styles.text3}>EPIC</div>
-            <div style={styles.text3}>LEGENDARY</div>
+        <div style={styles.progressStep} >
+        <RarityLevel>COMMON</RarityLevel>
+        <RarityLevel>UNCOMMON</RarityLevel>
+        <RarityLevel>RARE</RarityLevel>
+        <RarityLevel>EPIC</RarityLevel>
+        <RarityLevel>LEGENDARY</RarityLevel>
         </div>
         
         </div>
@@ -144,7 +159,6 @@ const RarityBar = ({metadata}) => (
 
     
 )
-
 
 
 
@@ -172,14 +186,19 @@ const styles = {
         fontSize: 25,
         padding: 10
     },
-    text3: {
+    // text3: {
 
-        fontFamily:'Times New Roman, Times, serif',
-        color: 'grey',
-        fontSize: 14,
+    //     fontFamily:'Times New Roman, Times, serif',
+    //     color: 'grey',
+    //     fontSize: 14,
+    //     // "@media (maxWidth: 600px)" : {
+    //     //     fontSize: 8,
+    //     //     color: 'white'
+    //     // }
+       
         
 
-    },
+    // },
 
     rarity_: {
         margin: 40,
@@ -190,9 +209,13 @@ const styles = {
         height: 40,
         border: "solid 4px white",
         borderRadius: 40
-    }
+    } 
+
   
-}
+} 
+
+
+
 
 
    
