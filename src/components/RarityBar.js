@@ -169,7 +169,7 @@ const styles = {
         justifyContent: "space-around",
         marginTop: -56,
         position: 'relative',
-        fontSize: 46,
+        fontSize: 48,
         color: 'white'
 
     },
@@ -186,20 +186,6 @@ const styles = {
         fontSize: 25,
         padding: 10
     },
-    // text3: {
-
-    //     fontFamily:'Times New Roman, Times, serif',
-    //     color: 'grey',
-    //     fontSize: 14,
-    //     // "@media (maxWidth: 600px)" : {
-    //     //     fontSize: 8,
-    //     //     color: 'white'
-    //     // }
-       
-        
-
-    // },
-
     rarity_: {
         margin: 40,
         
