@@ -94,13 +94,7 @@ const RarityBar = ({metadata}) => (
             <FadeInDiv><ZoomInDiv><div style={styles.text}>{selectValue(100 - parseInt((rarityTotal(metadata))))}</div></ZoomInDiv></FadeInDiv>
             
 
-        {/* <div style={styles.progressStep}>
-            <div style={styles.text}>COMMON</div>
-            <div style={styles.text}>UNCOMMON</div>
-            <div style={styles.text}>RARE</div>
-            <div style={styles.text}>EPIC</div>
-            <div style={styles.text}>LEGENDARY</div>
-        </div> */}
+        
 
         <div style={styles.progressBar}>
 
@@ -125,14 +119,24 @@ const RarityBar = ({metadata}) => (
 
         </div>
 
-        {/* <div style={styles.step}>
-            <div style={styles.text}>|</div>
-            <div style={styles.text}>|</div>
-            <div style={styles.text}>|</div>
-            <div style={styles.text}>|</div>
+        <div style={styles.step}>
+            <div>|</div>
+            <div>|</div>
+            <div>|</div>
+            <div>|</div>
             
             
-        </div> */}
+            
+            
+        </div>
+
+        <div style={styles.progressStep}>
+            <div style={styles.text3}>COMMON</div>
+            <div style={styles.text3}>UNCOMMON</div>
+            <div style={styles.text3}>RARE</div>
+            <div style={styles.text3}>EPIC</div>
+            <div style={styles.text3}>LEGENDARY</div>
+        </div>
         
         </div>
 
@@ -149,14 +153,16 @@ const styles = {
     step: {
         display: "flex",
         justifyContent: "space-around",
-        top: -47,
+        marginTop: -56,
         position: 'relative',
-        fontSize: 40
+        fontSize: 46,
+        color: 'white'
 
     },
     progressStep: {
         display: "flex",
         justifyContent: "space-between",
+        margin: 20
         
 
     },
@@ -166,6 +172,14 @@ const styles = {
         fontSize: 25,
         padding: 10
     },
+    text3: {
+
+        fontFamily:'Times New Roman, Times, serif',
+        color: 'grey',
+        fontSize: 14,
+        
+
+    },
 
     rarity_: {
         margin: 40,
@@ -174,7 +188,7 @@ const styles = {
     },
     progressBar: {
         height: 40,
-        border: "solid 1px white",
+        border: "solid 4px white",
         borderRadius: 40
     }
   
