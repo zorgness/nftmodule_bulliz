@@ -88,7 +88,6 @@ const RarityLevel = styled.div`
         font-family:'Times New Roman, Times, serif';
         font-size: 14px;
         @media (max-width: 450px) {
-            color: white;
             font-size: 8px;
         }
        
@@ -167,9 +166,9 @@ const styles = {
     step: {
         display: "flex",
         justifyContent: "space-around",
-        marginTop: -56,
+        marginTop: -58,
         position: 'relative',
-        fontSize: 48,
+        fontSize: 50,
         color: 'white'
 
     },
