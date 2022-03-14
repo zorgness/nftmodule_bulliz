@@ -33,19 +33,19 @@ function selectValue(value) {
 
         let res = "";
     
-        if(value >= 1 && value <= 19) {
+        if(value >= 1 && value <= 24) {
             res = "COMMON"
         }
-        if(value >= 20 && value <= 39) {
+        if(value >= 25 && value <= 49) {
             res = "UNCOMMON"
         }
-        if(value >= 40 && value <= 59) {
+        if(value >= 50 && value <= 69) {
             res = "RARE"
         }
-        if(value >= 60 && value <= 79) {
+        if(value >= 70 && value <= 89) {
             res = "EPIC"
         } 
-        if(value >= 61 && value <= 99) {
+        if(value >= 90 && value <= 99) {
             
             res = "LEGENDARY"
         } 
@@ -53,6 +53,9 @@ function selectValue(value) {
         return res
   
   }
+
+
+  const test = 10;
 
 
 
@@ -83,19 +86,16 @@ function rarityTotal(data) {
 
 }
 
-const RarityLevel = styled.div`    
+const RarityLevel = styled.div` 
         color: grey;
         font-family:'Times New Roman, Times, serif';
         font-size: 14px;
         @media (max-width: 450px) {
             font-size: 8px;
-        }
-       
-
-    
-        
+        }     
     
 `
+
 
 
 const RarityBar = ({metadata}) => (
@@ -105,7 +105,7 @@ const RarityBar = ({metadata}) => (
 
         <div style={styles.rarity_} className="progressBar">
 
-            <FadeInDiv><ZoomInDiv><div style={styles.text}>{selectValue(100 - parseInt((rarityTotal(metadata))))}</div></ZoomInDiv></FadeInDiv>
+            <FadeInDiv><ZoomInDiv><div style={styles.text}>{selectValue(100 - rarityTotal(metadata))}</div></ZoomInDiv></FadeInDiv>
             
 
         
@@ -115,7 +115,7 @@ const RarityBar = ({metadata}) => (
             
         
             <ProgressBar
-             completed={100 - parseInt((rarityTotal(metadata)))}
+             completed={100 - rarityTotal(metadata)}
              isLabelVisible={false}
              ariaValuemin={0}
              ariaValuemax={100}
@@ -134,12 +134,10 @@ const RarityBar = ({metadata}) => (
         </div>
 
         <div style={styles.step}>
-            <div>|</div>
-            <div>|</div>
-            <div>|</div>
-            <div>|</div>
-            
-            
+            <div style={styles.item0}>|</div>
+            <div style={styles.item1}>|</div>
+            <div style={styles.item2}>|</div>
+            <div style={styles.item3}>|</div>
             
             
         </div>
@@ -165,11 +163,12 @@ const styles = {
     
     step: {
         display: "flex",
-        justifyContent: "space-around",
+        // justifyContent: "space-around",
         marginTop: -58,
         position: 'relative',
         fontSize: 50,
-        color: 'white'
+        color: 'white',
+        
 
     },
     progressStep: {
@@ -194,7 +193,38 @@ const styles = {
         height: 40,
         border: "solid 4px white",
         borderRadius: 40
-    } 
+    },
+    item0: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+        width: '25%',
+        // background: 'white',
+        // border: 'solid 1px pink',
+        
+    },
+    item1: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+        width: '25%',
+        // background: 'white',
+        // border: 'solid 1px green'
+    },
+    item2: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+        width: '20%',
+        // background: 'white',
+        // border: 'solid 1px blue'
+    },
+    item3: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+        width: '20%',
+        // background: 'white',
+        // border: 'solid 1px red'
+    }
+    
+
 
   
 } 
