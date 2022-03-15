@@ -86,11 +86,13 @@ function rarityTotal(data) {
 
 }
 
-const RarityLevel = styled.div` 
+const RarityLevel = styled.div`
+        display: flex;
+        justify-content: 'flex-start';
         color: grey;
         font-family:'Times New Roman, Times, serif';
         font-size: 14px;
-        @media (max-width: 450px) {
+        @media (max-width: 600px) {
             font-size: 8px;
         }     
     
@@ -143,11 +145,11 @@ const RarityBar = ({metadata}) => (
         </div>
 
         <div style={styles.progressStep} >
-        <RarityLevel>COMMON</RarityLevel>
-        <RarityLevel>UNCOMMON</RarityLevel>
-        <RarityLevel>RARE</RarityLevel>
-        <RarityLevel>EPIC</RarityLevel>
-        <RarityLevel>LEGENDARY</RarityLevel>
+        <RarityLevel style={{width: '25%'}}>COMMON</RarityLevel>
+        <RarityLevel style={{width: '25%'}}>UNCOMMON</RarityLevel>
+        <RarityLevel style={{width: '20%'}}>RARE</RarityLevel>
+        <RarityLevel style={{width: '20%'}}>EPIC</RarityLevel>
+        <RarityLevel style={{width: '10%'}}>LEGENDARY</RarityLevel>
         </div>
         
         </div>
