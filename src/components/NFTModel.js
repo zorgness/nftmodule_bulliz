@@ -11,15 +11,15 @@ const NftModel = (metadata) => {
     return (
         <div className='nft-info-container'>
         
-        <div style={styles.text}>
-            <h2>Bullyz Crew</h2>
-            <h3>BC</h3>
-        </div>
+        {/* <div style={styles.text}>
+            <h2></h2>
+            <h3></h3>
+        </div> */}
     
         <div style={styles.images_container}>
-            <img src={"https://i.ibb.co/HPP7XNV/Capture-d-e-cran-2022-03-10-a-14-20-15.png"} style={styles.image} alt="nft-image" />
+            <img src={"https://i.ibb.co/HPP7XNV/Capture-d-e-cran-2022-03-10-a-14-20-15.png"} style={styles.image} alt="" />
     
-            <img src={"https://i.ibb.co/HPP7XNV/Capture-d-e-cran-2022-03-10-a-14-20-15.png"} style={styles.image} alt="nft-video" />
+            <img src={"https://i.ibb.co/HPP7XNV/Capture-d-e-cran-2022-03-10-a-14-20-15.png"} style={styles.image} alt="" />
         
     
             
