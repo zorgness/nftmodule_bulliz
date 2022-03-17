@@ -23,10 +23,15 @@ const Image = styled.img`
 const ImageContainer = styled.div`
 width: 450px;
 height: 450px;
+border: solid 20px rgba(0, 0, 0, 0.4);
+border-radius: 20px;
 
 @media (max-width: 600px) {
     width: 350px;
     height: 350px;
+}
+@media (max-width: 400px) {
+    border: solid 20px rgba(0, 0, 0, .0);
 }
 
 `
@@ -90,12 +95,12 @@ const NftModel = (metadata) => {
 
 
 const styles = {
-    image: {
+    // image: {
         
-        border: 'solid 20px rgba(0, 0, 0, .4)',
-        borderRadius: 20
+    //     border: 'solid 20px rgba(0, 0, 0, .4)',
+    //     borderRadius: 20
         
-      },
+    //   },
      
       images_container: {
           display: "flex",

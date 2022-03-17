@@ -48,9 +48,15 @@ const Video = styled.video`
 const ImageContainer = styled.div`
 width: 450px;
 height: 450px;
+border: solid 20px rgba(0, 0, 0, 0.4);
+border-radius: 20px;
+
 @media (max-width: 600px) {
     width: 350px;
     height: 350px;
+}
+@media (max-width: 400px) {
+    border: solid 20px rgba(0, 0, 0, .0);
 }
 
 `
@@ -78,7 +84,7 @@ class NftItems extends Component {
 
                     <div style={styles.images_container}>
 
-                        <ImageContainer style={styles.image}>
+                        <ImageContainer >
 
                             <Image src={nft.image}  alt="" />
 
@@ -86,7 +92,7 @@ class NftItems extends Component {
                         
 
                       
-                        <ImageContainer style={styles.image}>
+                        <ImageContainer >
 
                             <Video
                             controls
@@ -135,14 +141,9 @@ class NftItems extends Component {
         }
 
 const styles = {
-    image: {
-        
-        border: 'solid 20px rgba(0, 0, 0, .4)',
-        borderRadius: 20
-        
-      },
+   
       video : {
-        margin:10,
+        
         width: 450,
         maxWidth: '100%'
         
