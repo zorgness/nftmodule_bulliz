@@ -15,7 +15,7 @@ function App() {
 
 const styles = {
   App: {
-    background: 'grey',
+    
     textAlign: 'center',
     
   }
