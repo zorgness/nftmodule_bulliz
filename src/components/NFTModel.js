@@ -1,8 +1,35 @@
 import  Attributes  from './Attributes';
 import RarityItems from './RarityItems';
 import RarityBar from './RarityBar';
+import styled from 'styled-components';
 
 
+
+const Image = styled.img`
+
+    width: 450px;
+    height: 450px;
+    
+    background-color: 'gray';
+    
+    @media (max-width: 600px) {
+        width: 350px;
+        height: 350px;
+    }
+
+
+`
+
+const ImageContainer = styled.div`
+width: 450px;
+height: 450px;
+
+@media (max-width: 600px) {
+    width: 350px;
+    height: 350px;
+}
+
+`
 
 
 
@@ -17,10 +44,19 @@ const NftModel = (metadata) => {
         </div> */}
     
         <div style={styles.images_container}>
-            <img src={"https://i.ibb.co/HPP7XNV/Capture-d-e-cran-2022-03-10-a-14-20-15.png"} style={styles.image} alt="" />
-    
-            <img src={"https://i.ibb.co/HPP7XNV/Capture-d-e-cran-2022-03-10-a-14-20-15.png"} style={styles.image} alt="" />
-        
+
+            <ImageContainer style={styles.image}>
+
+                <Image src={"https://i.ibb.co/HPP7XNV/Capture-d-e-cran-2022-03-10-a-14-20-15.png"} alt=""/> 
+
+            </ImageContainer>
+           
+            
+            <ImageContainer style={styles.image}>
+
+                <Image src={"https://i.ibb.co/HPP7XNV/Capture-d-e-cran-2022-03-10-a-14-20-15.png"} alt=""/> 
+
+            </ImageContainer>
     
             
         </div>
@@ -55,13 +91,9 @@ const NftModel = (metadata) => {
 
 const styles = {
     image: {
-        width: 450,
-        height: 450,
-        margin:10,
-        backgroundColor: 'gray',
-        border: 'solid 10px rgba(211, 220, 50, .8);',
         
-        
+        border: 'solid 20px rgba(0, 0, 0, .4)',
+        borderRadius: 20
         
       },
      
@@ -69,7 +101,8 @@ const styles = {
           display: "flex",
           justifyContent: "space-around",
           flexWrap: "wrap",
-          padding: 20
+          padding: 20,
+          gap: '15px 15px'
       },
       
       rarity_items_container: {

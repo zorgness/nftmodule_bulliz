@@ -21,6 +21,41 @@ const TadaDiv = styled.div`
 const jsonModel = require('../Data/modele.json');
 
 
+const Image = styled.img`
+
+    width: 450px;
+    height: 450px;
+    background-color: 'gray';
+    @media (max-width: 600px) {
+        width: 350px;
+        height: 350px;
+    }
+`
+
+
+const Video = styled.video`
+    width: 450px;   
+    height: 450px;
+    background-color: 'gray';
+    @media (max-width: 600px) {
+        width: 350px;
+        height: 350px;
+}
+
+`
+
+
+const ImageContainer = styled.div`
+width: 450px;
+height: 450px;
+@media (max-width: 600px) {
+    width: 350px;
+    height: 350px;
+}
+
+`
+
+
 class NftItems extends Component {
     render() {
         
@@ -42,18 +77,27 @@ class NftItems extends Component {
                     </div> */}
 
                     <div style={styles.images_container}>
-                        <img src={nft.image} style={styles.image} alt="nft" />
-                    
 
-                        <video width="450"
-                         height="450" 
-                         controls 
-                         style={styles.video}
-                         autoPlay
-                         loop
-                         >
-                            <source src={nft.animation_url} type="video/mp4"/>
-                        </video>
+                        <ImageContainer style={styles.image}>
+
+                            <Image src={nft.image}  alt="" />
+
+                        </ImageContainer>
+                        
+
+                      
+                        <ImageContainer style={styles.image}>
+
+                            <Video
+                            controls
+                            autoPlay
+                            loop
+                            src={nft.animation_url}
+                            />  
+                            
+                        </ImageContainer>
+                          
+
                     </div>
 
                     <div style={styles.rarity_items_container}>
@@ -92,12 +136,9 @@ class NftItems extends Component {
 
 const styles = {
     image: {
-        width: 450,
-        height: 450,
-        margin:10,
-        backgroundColor: 'gray',
-        border: 'solid 10px rgba(211, 220, 50, .8);',
         
+        border: 'solid 20px rgba(0, 0, 0, .4)',
+        borderRadius: 20
         
       },
       video : {
@@ -112,7 +153,8 @@ const styles = {
           display: "flex",
           justifyContent: "space-around",
           flexWrap: "wrap",
-          padding: 20
+          padding: 20,
+          gap: '10px 10px'
       },
       error: {
           fontFamily: "serial",
