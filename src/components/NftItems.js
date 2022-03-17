@@ -36,17 +36,17 @@ class NftItems extends Component {
                 </TadaDiv></SlideDiv> 
                 :<div className='nft-info-container'>
     
-                    <div style={styles.text}>
+                    {/* <div style={styles.text}>
                         <h2>{nft.name}</h2>
                         <h3>{nft.symbol}</h3>
-                    </div>
+                    </div> */}
 
                     <div style={styles.images_container}>
                         <img src={nft.image} style={styles.image} alt="nft" />
                     
 
-                        <video width="280"
-                         height="280" 
+                        <video width="400"
+                         height="400" 
                          controls 
                          style={styles.video}
                          autoPlay
@@ -92,8 +92,8 @@ class NftItems extends Component {
 
 const styles = {
     image: {
-        width: 280,
-        height: 280,
+        width: 400,
+        height: 400,
         margin:10,
         backgroundColor: 'gray'
         
@@ -101,7 +101,7 @@ const styles = {
       },
       video : {
         margin:10,
-        width: 280,
+        width: 400,
         maxWidth: '100%'
         
         

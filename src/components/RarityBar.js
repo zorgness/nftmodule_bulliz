@@ -87,13 +87,17 @@ function rarityTotal(data) {
 }
 
 const RarityLevel = styled.div`
-        display: flex;
-        justify-content: 'flex-start';
-        color: grey;
+        
+        
+        color: white;
         font-family:'Times New Roman, Times, serif';
         font-size: 14px;
+        
         @media (max-width: 600px) {
             font-size: 8px;
+            
+            
+           
         }     
     
 `
@@ -122,7 +126,7 @@ const RarityBar = ({metadata}) => (
              ariaValuemin={0}
              ariaValuemax={100}
              height='40px'
-            //  bgColor={'linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 25%, rgba(252,176,69,1) 75%, rgba(56,253,29,1) 100%)'}
+            //  bgColor={'linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 25%, rgba(252,176,69,1) 50%, rgba(56,253,29,1) 100%)'}
              bgColor={'#bd3535'}
              baseBgColor={'transparent'}
              transitionDuration= '2s'
@@ -148,8 +152,8 @@ const RarityBar = ({metadata}) => (
         <RarityLevel style={{width: '25%'}}>COMMON</RarityLevel>
         <RarityLevel style={{width: '25%'}}>UNCOMMON</RarityLevel>
         <RarityLevel style={{width: '20%'}}>RARE</RarityLevel>
-        <RarityLevel style={{width: '20%'}}>EPIC</RarityLevel>
-        <RarityLevel style={{width: '10%'}}>LEGENDARY</RarityLevel>
+        <RarityLevel style={{width: '22%'}}>EPIC</RarityLevel>
+        <RarityLevel style={{width: '8%'}}>LEGENDARY</RarityLevel>
         </div>
         
         </div>

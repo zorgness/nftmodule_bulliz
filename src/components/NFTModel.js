@@ -55,8 +55,8 @@ const NftModel = (metadata) => {
 
 const styles = {
     image: {
-        width: 280,
-        height: 280,
+        width: 400,
+        height: 400,
         margin:10,
         backgroundColor: 'gray'
         
