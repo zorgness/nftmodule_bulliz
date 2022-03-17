@@ -45,8 +45,8 @@ class NftItems extends Component {
                         <img src={nft.image} style={styles.image} alt="nft" />
                     
 
-                        <video width="400"
-                         height="400" 
+                        <video width="450"
+                         height="450" 
                          controls 
                          style={styles.video}
                          autoPlay
@@ -92,16 +92,17 @@ class NftItems extends Component {
 
 const styles = {
     image: {
-        width: 400,
-        height: 400,
+        width: 450,
+        height: 450,
         margin:10,
-        backgroundColor: 'gray'
+        backgroundColor: 'gray',
+        border: 'solid 10px rgba(211, 220, 50, .8);',
         
         
       },
       video : {
         margin:10,
-        width: 400,
+        width: 450,
         maxWidth: '100%'
         
         
