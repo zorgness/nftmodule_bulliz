@@ -72,7 +72,7 @@ class NftItems extends Component {
         
             return (
                 <div>{nft.symbol !== "BC" && !nft.name.includes("Bulliz Crew")
-                ? <SlideDiv><TadaDiv style={{display:"flex", justifyContent:"center"}}>
+                ? <SlideDiv><TadaDiv style={{display:"flex", justifyContent:"center", textAlign:"center"}}>
                      <div style={styles.error}>Not from our Crew <br /> 凸( ಠ益ಠ)凸</div>
                 </TadaDiv></SlideDiv> 
                 :<div className='nft-info-container'>
@@ -172,7 +172,8 @@ const styles = {
           justifyContent: "center",
       },
       text: {
-        color: 'white'
+        color: 'white',
+        textAlign: "center"
     }
       
    

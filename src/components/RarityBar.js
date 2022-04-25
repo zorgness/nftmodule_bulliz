@@ -5,19 +5,19 @@ import { slideInUp, tada, zoomIn, fadeIn } from 'react-animations';
 
 const rarityChart = require('../Data/raritychart.json')
 
-const slideAnimation = keyframes`${slideInUp}`;
-const tadaAnimation = keyframes`${tada}`;
+// const slideAnimation = keyframes`${slideInUp}`;
+// const tadaAnimation = keyframes`${tada}`;
 const zoomInAnimation = keyframes`${zoomIn}`;
 const fadeInAnimation = keyframes`${fadeIn}`;
 
 
-const SlideDiv = styled.div`
-  animation: 2s ${slideAnimation};
-`;
+// const SlideDiv = styled.div`
+//   animation: 2s ${slideAnimation};
+// `;
 
-const TadaDiv = styled.div`
-  animation: 2s ${tadaAnimation};
-`;
+// const TadaDiv = styled.div`
+//   animation: 2s ${tadaAnimation};
+// `;
 
 const ZoomInDiv = styled.div`
     animation: 10s ${zoomInAnimation};
@@ -55,8 +55,6 @@ function selectValue(value) {
   }
 
 
-  const test = 10;
-
 
 
 function rarityTotal(data) {
@@ -88,7 +86,8 @@ function rarityTotal(data) {
 
 const RarityLevel = styled.div`
         
-        
+        display: flex;
+        justify-content: center;
         color: white;
         font-family:'Times New Roman, Times, serif';
         font-size: 14px;
@@ -152,8 +151,8 @@ const RarityBar = ({metadata}) => (
         <RarityLevel style={{width: '25%'}}>COMMON</RarityLevel>
         <RarityLevel style={{width: '25%'}}>UNCOMMON</RarityLevel>
         <RarityLevel style={{width: '20%'}}>RARE</RarityLevel>
-        <RarityLevel style={{width: '22%'}}>EPIC</RarityLevel>
-        <RarityLevel style={{width: '8%'}}>LEGENDARY</RarityLevel>
+        <RarityLevel style={{width: '20%'}}>EPIC</RarityLevel>
+        <RarityLevel style={{width: '10%'}}>LEGENDARY</RarityLevel>
         </div>
         
         </div>

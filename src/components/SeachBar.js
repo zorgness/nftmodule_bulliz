@@ -84,7 +84,7 @@ const styles = {
         justifyContent: 'center',
         alignItems: 'center',
         flexWrap: 'wrap',
-        margin: 60
+        margin: 30
 
     },
     field: {

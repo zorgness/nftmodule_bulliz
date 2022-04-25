@@ -46,8 +46,8 @@ const NftModel = (metadata) => {
         {/* <div style={styles.text}>
             <h2></h2>
             <h3></h3>
-        </div> */}
-    
+        </div>
+     */}
         <div style={styles.images_container}>
 
             <ImageContainer style={styles.image}>
@@ -95,13 +95,7 @@ const NftModel = (metadata) => {
 
 
 const styles = {
-    // image: {
-        
-    //     border: 'solid 20px rgba(0, 0, 0, .4)',
-    //     borderRadius: 20
-        
-    //   },
-     
+ 
       images_container: {
           display: "flex",
           justifyContent: "space-around",
@@ -115,7 +109,8 @@ const styles = {
           justifyContent: "center",
       },
       text: {
-          color: 'white'
+          color: 'white',
+          textAlign: "center"
       }
       
    
